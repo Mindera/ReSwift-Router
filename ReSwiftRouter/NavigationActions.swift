@@ -14,9 +14,9 @@ public let typeMap: [String: StandardActionConvertible.Type] =
 
 public struct SetRouteAction: StandardActionConvertible {
 
-    let route: Route
-    let animated: Bool
-    let groupPops: Bool
+    public let route: Route
+    public let animated: Bool
+    public let groupPops: Bool
     public static let type = "RE_SWIFT_ROUTER_SET_ROUTE"
 
     public init (_ route: Route, animated: Bool = true, groupPops: Bool = false) {
@@ -42,8 +42,8 @@ public struct SetRouteAction: StandardActionConvertible {
 }
 
 public struct SetRouteSpecificData: Action {
-    let route: Route
-    let data: Any
+    public let route: Route
+    public let data: Any
 
     public init(route: Route, data: Any) {
         self.route = route
